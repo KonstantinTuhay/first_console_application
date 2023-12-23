@@ -3,14 +3,14 @@
 let numberOfFilms;
 
 function start() {
-  numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+  numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "").trim();
 
   while (
     numberOfFilms === null ||
     numberOfFilms === "" ||
     isNaN(numberOfFilms)
   ) {
-    numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+    numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "").trim();
   }
 }
 start();
@@ -25,8 +25,8 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
-    let a = prompt("Один из последних просмотренных фильмов?", ""),
-      b = +prompt("На сколько оцените его?", "");
+    let a = prompt("Один из последних просмотренных фильмов?", "").trim(),
+      b = +prompt("На сколько оцените его?", "").trim();
 
     if (
       a === "" ||
